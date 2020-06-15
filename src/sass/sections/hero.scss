@@ -1,0 +1,38 @@
+.hero {
+  background-image: $main-gradient, url(../images/bg.jpg);
+  @extend %bg-img;
+  text-align: center;
+  padding: 218px 0 230px 0;
+
+  @media (min-resolution: 192dpi) {    
+    background-image: $main-gradient, url(../images/bg@2x.jpg);
+  }
+
+  .hero__subtitle { 
+    @include font($kaushan,72px,400,1.2,$text-color-white);
+    
+    margin-bottom: 35px;
+  }
+
+  .hero__title { 
+    @include font($main-font,150px,700,0.933,$text-color-white);
+    text-transform: uppercase;
+    letter-spacing: -5px;
+    margin-bottom: 110px;
+  }
+
+  .hero__more-link { 
+    @include font($main-font,14px,700,34px,$text-color-white);
+    text-transform: uppercase;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    transition: all 0.3s;
+    &:hover {
+      border: 3px solid $sec-color;
+      color: $sec-color;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.footer { 
+
+  .footer__body { 
+    border-top: 1px solid rgb(229, 229, 229);
+    @include flex(space-between,center,wrap);
+    padding: 10px 15px;
+    .footer__copy { 
+      @include font($main-font,14px,400,1.2,$text-color-black);
+      .footer__copy-link { 
+        color: $sec-color;
+
+      }
+    }
+    .footer__input { 
+      @include flex(space-between,center,nowrap);
+      width: 380px;
+      .footer__input-email {
+        border: 1px solid rgb(229, 229, 229);
+        border-right: none;
+        width: 60%;
+        height: 40px;
+        @include font($main-font,14px,400,1.2,$text-color-black);
+        padding-left: 10px;
+        &::placeholder {
+          @include font($main-font,14px,400,1.6,rgb(229, 229, 229));
+          font-style: italic;
+          letter-spacing: -0.6px;
+        } 
+        &:focus:invalid {
+          border: 1px solid red;
+          border-right: none;
+        }
+        &:valid {
+          border: 1px solid green;
+          border-right: none;
+        }
+      }
+
+      .footer__input-button { 
+        @include font($main-font,14px,700,40px,$text-color-white);
+        background-color: $thr-color;
+        text-transform: uppercase;
+        text-align: center;
+        width: 40%;
+        transition: all 0.3s;
+        &:hover {
+          background-color: $main-color;
+          color: $sec-color;
+        }
+      }
+    }
+  }
+}
+.form__inputs input:focus:invalid,
+.form__textarea:focus:invalid {
+  border: 1px solid red;
+}
+.form__inputs input:valid,
+.form__textarea:valid {
+  border: 1px solid green;
+}
+
+.Shape_4 {
+  background-color: rgb(229, 229, 229);
+  position: absolute;
+  left: 360px;
+  top: 2472px;
+  width: 1200px;
+  height: 1px;
+  z-index: 101;
+}

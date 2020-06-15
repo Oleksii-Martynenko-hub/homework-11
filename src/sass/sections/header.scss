@@ -1,0 +1,107 @@
+
+.navigation { }
+
+.header { 
+  width: 100%;
+  position: absolute;
+
+
+  .header__body {
+    @include flex(space-between,center,nowrap);
+    padding: 4px 15px;
+    
+    .logo { 
+      .logo__text { 
+        @include font($main-font,30px,700,1.2,$text-color-white);
+      }
+    }
+
+    .header__menu { 
+      @include flex(space-between,center,nowrap);
+
+      .navigation__menu-list { 
+        @include flex(space-between,center,nowrap);
+        margin-right: 52px;
+        @media (max-width: 829px) {
+         margin-right: 25px;     
+        }
+        .menu-list__item { 
+
+          &:not(:last-child) {
+            margin-right: 55px;
+            @media (max-width: 829px) {
+              margin-right: 25px;
+            }
+          }
+
+          .menu-list__item-link { 
+            @include font($main-font,14px,400,1.2,$text-color-white);
+            text-transform: uppercase;
+            cursor: pointer;
+            padding: 10px 0;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            &:hover {
+              border-bottom: 3px solid $main-color;
+              color: $main-color;
+            }
+            
+            
+          }
+        }
+
+      }
+
+      .nav-btn { 
+        @include flex(space-between,center,nowrap);
+
+        .nav-btn__basket { 
+          margin-right: 40px;
+          @media (max-width: 829px) {
+           margin-right: 25px;   
+          }
+          cursor: pointer;
+          padding: 12px 0;
+          border-bottom: 3px solid transparent;
+          transition: all 0.3s;
+          .nav-btn__basket-link { 
+            .nav-btn__svg { 
+              fill: white;
+              transition: all 0.3s;
+            }
+          }
+          &:hover {
+            border-bottom: 3px solid $main-color;
+            .nav-btn__svg { 
+              fill: $main-color;
+            }
+          }
+        }
+
+        .nav-btn__search { 
+          padding: 12px 0 8px;
+          cursor: pointer;
+          border-bottom: 3px solid transparent;
+          transition: all 0.3s;
+          .nav-btn__search-btn { 
+            background-color: transparent;
+            .nav-btn__svg { 
+              fill: white;
+              transition: all 0.3s;
+            }
+          }
+          &:hover {
+            border-bottom: 3px solid $main-color;
+            .nav-btn__svg { 
+              fill: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

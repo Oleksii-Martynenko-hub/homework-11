@@ -1,0 +1,98 @@
+
+.subtitle { 
+  @include font($kaushan,24px,400,1.2,$text-color-black);
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.title { 
+  @include font($main-font,30px,700,1.2,$text-color-black);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 63px;
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 35px auto 0;
+    background-color: $sec-color;
+  }
+
+}
+
+.content-section { 
+}
+.item-title { 
+  @include font($main-font,14px,400,1.2,$text-color-black);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.item-text { 
+  @include font($main-font,15px,400,1.6,$text-color-sec);
+  letter-spacing: -0.6px;
+}
+
+
+.services { 
+
+  .services__subtitle { }
+
+  .services__title { }
+
+  .services__content { 
+    .services__items-list { 
+  
+      @include flex(space-between, space-between, wrap)
+
+      .services__item { 
+        flex: 33%;
+        padding-left: 92px;
+        background-position: top 5px left 30px;
+        background-repeat: no-repeat;
+        background-image: url(../images/alarm.svg);
+        &:nth-child(2) {
+          background-image: url(../images/graph.svg);
+        }
+        &:nth-child(3) {
+          background-image: url(../images/dekstop.svg);
+        }
+        &:nth-child(4) {
+          background-image: url(../images/book.svg);
+        }
+        &:nth-child(5) {
+          background-image: url(../images/home.svg);
+        }
+        &:nth-child(6) {
+          background-image: url(../images/square.svg);
+        }
+        &:nth-child(3n) {
+          margin-bottom: 94px;
+        }
+        &:last-child {
+          margin: 0;
+        }
+        .services__item-title { }
+
+
+        .services__item-text { }
+      }
+
+    }
+
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
