@@ -1,109 +1,123 @@
-.ourteam { 
+.ourteam {
   margin-bottom: 35px;
-  .ourteam__subtitle { 
 
+  .ourteam__subtitle {
   }
-  .ourteam__title { 
-margin-bottom: 42px;
+
+  .ourteam__title {
+    margin-bottom: 42px;
   }
-  .ourteam__descrip-text { 
-    @include font($sec-font,15px,400,1.5,$text-color-sec);
+
+  .ourteam__descrip-text {
+    @include font($sec-font, 15px, 400, 1.5, $text-color-sec);
     text-align: center;
     padding: 0 100px;
     letter-spacing: 0.12px;
     margin-bottom: 90px;
   }
-  .ourteam__content { 
 
-
-    .ourteam__members-list { 
+  .ourteam__content {
+    .ourteam__members-list {
       @include flex(space-between, center, wrap);
-      @media (max-width:1250px) {
+      @media (max-width: 1250px) {
         justify-content: center;
       }
-      .ourteam__member { 
-        text-align: center;
-        @media (max-width:1250px) {
 
+      .ourteam__member {
+        text-align: center;
+        @media (max-width: 1250px) {
           padding: 10px;
         }
-        &:after {
 
+        &:after {
           @media (max-width: 829px) {
             content: '';
             width: 380px;
             height: 1px;
             display: block;
             margin: 0 auto;
-            border-bottom: 1px solid rgb(229, 229, 229);     
+            border-bottom: 1px solid rgb(229, 229, 229);
           }
         }
-        .ourteam__wrap-foto { 
+
+        .ourteam__wrap-foto {
           position: relative;
           width: 380px;
           height: 470px;
           margin-bottom: 30px;
-          
-          .ourteam__substrate { 
+
+          .ourteam__substrate {
             @extend %pos-absolute;
             background-color: $thr-color;
           }
-          .ourteam__wrap-image { 
+
+          .ourteam__wrap-image {
             @extend %pos-absolute;
             transition: all 0.3s;
-            .ourteam__image {               
+
+            .ourteam__image {
             }
-            .ourteam__overlay { 
+
+            .ourteam__overlay {
               @extend %pos-absolute;
               @extend %flex-center;
               background-image: $main-gradient;
               visibility: hidden;
               opacity: 0;
               transition: all 0.3s;
-              .ourteam__list-icons { 
+
+              .ourteam__list-icons {
                 @extend %flex-center;
-                .ourteam__social-icon { 
+
+                .ourteam__social-icon {
                   background-color: $main-color;
                   @extend %flex-center;
                   width: 56px;
                   height: 56px;
                   cursor: pointer;
                   transition: all 0.3s;
+
                   &:not(:last-child) {
                     margin-right: 1px;
                   }
-                  .ourteam__social-icon-list-svg { 
+
+                  .ourteam__social-icon-list-svg {
                     height: 25px;
                     width: 25px;
                     fill: $sec-color;
                     transition: all 0.3s;
                   }
+
                   &:hover {
                     background-color: $sec-color;
+
                     .ourteam__social-icon-list-svg {
                       fill: $text-color-white;
-                      
                     }
                   }
                 }
               }
             }
           }
+
           &:hover {
             .ourteam__wrap-image {
               top: -10px;
               left: -10px;
             }
+
             .ourteam__overlay {
               visibility: visible;
               opacity: 1;
             }
           }
         }
-        .ourteam__member-name {           
+
+        .ourteam__member-name {
           margin-bottom: 8px;
         }
-        .ourteam__member-profession { 
+
+        .ourteam__member-profession {
           font-style: italic;
         }
       }
@@ -111,10 +125,14 @@ margin-bottom: 42px;
   }
 }
 
+.ourteam__social-icon-facebook {
+}
 
+.ourteam__social-icon-twitter {
+}
 
+.ourteam__social-icon-pinterest {
+}
 
-.ourteam__social-icon-facebook { }
-.ourteam__social-icon-twitter { }
-.ourteam__social-icon-pinterest { }
-.ourteam__social-icon-instagram { }
+.ourteam__social-icon-instagram {
+}
