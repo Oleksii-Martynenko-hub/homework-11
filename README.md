@@ -1,4 +1,4 @@
-![Banner](./banner.png)
+
 
 # <a href="https://alexm4rt1n.github.io/homework-11/build" target="_blank">homework-11</a>
 
